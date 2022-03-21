@@ -62,7 +62,7 @@ class Login extends React.Component {
               onChange={ this.handleChange }
             />
           </label>
-          <Link to="/carteira">
+          <Link to="/list">
             <button
               type="submit"
               disabled={ !(this.validateEmail(emailInputText)
