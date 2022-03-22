@@ -1,4 +1,4 @@
-import { ADD_TODO, REMOVE_TODO, EDIT_TODO, ADD_TEXT } from '../actions';
+import { ADD_TODO, REMOVE_TODO, EDIT_TODO, ADD_TEXT, DELETE_ALL } from '../actions';
 
 const INITIAL_STATE = {
   todos: [],
@@ -29,6 +29,11 @@ const todoReducer = (state = INITIAL_STATE, action) => {
       ...state,
       text: state.todos[action.payload],
     };  
+    case DELETE_ALL:
+      return {
+        ...state,
+        todos: [],
+      }
   default:
     return state;
   }
