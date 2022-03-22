@@ -2,12 +2,20 @@ export const LOGIN_EMAIL = 'LOGIN_EMAIL';
 export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const EDIT_TODO = 'EDIT_TODO';
+const ADD_TEXT = 'ADD_TEXT';
 
 export default function loginEmail(email) {
   return {
     type: LOGIN_EMAIL,
     email,
   };
+}
+
+export function addText(payload) {
+  return {
+    type: ADD_TEXT,
+    payload,
+  }
 }
 
 export function addTodo(todo) {
