@@ -1,21 +1,27 @@
-import { SAVE_TODO, REMOVE_TODO } from '../actions';
+import { ADD_TODO, REMOVE_TODO, EDIT_TODO } from '../actions';
 
 const INITIAL_STATE = {
-  list: [],
+  todos: [],
+  text: ''
 };
 
 const todoReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-  case SAVE_TODO:
+  case ADD_TODO:
     return {
       ...state,
-      TODOs: [...state.expenses, action.payload],
+      todos: state.todos.concat(action.payload),
     };
   case REMOVE_TODO:
     return {
       ...state,
-      expenses: action.payload,
+      todos: state.todos.filter((todo, i) => i !== action.payload),
     };
+  case EDIT_TODO:
+    return {
+      ...state,
+      text: state.todos[action.payload],
+    };  
   default:
     return state;
   }
