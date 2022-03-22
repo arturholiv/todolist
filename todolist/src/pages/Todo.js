@@ -4,6 +4,7 @@ import TodosList from "../components/TodosList";
 import { AiOutlineUnorderedList } from "react-icons/ai"
 import { connect } from "react-redux";
 import { deleteAll, saveTodos } from "../actions";
+import Footer from "../components/Footer";
 
 const Todo = ({deleteAll, saveTodos}) => {
   useEffect(() => {
@@ -25,6 +26,7 @@ const Todo = ({deleteAll, saveTodos}) => {
           Delete All
         </button>
       </div>
+      <Footer />
     </div>
   );
 }
