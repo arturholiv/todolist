@@ -4,12 +4,19 @@ export const REMOVE_TODO = 'REMOVE_TODO';
 export const DELETE_ALL = 'DELETE_ALL';
 export const EDIT_TODO = 'EDIT_TODO';
 export const ADD_TEXT = 'ADD_TEXT';
+export const SAVE_TODOS = 'SAVE_TODOS';
 
 export default function loginEmail(email) {
   return {
     type: LOGIN_EMAIL,
     email,
   };
+}
+
+export function saveTodos() {
+  return {
+    type: SAVE_TODOS,
+  }
 }
 
 export function addText(payload) {

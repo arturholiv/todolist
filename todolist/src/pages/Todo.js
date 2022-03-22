@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import InputField from "../components/InputField";
 import TodosList from "../components/TodosList";
 import { AiOutlineUnorderedList } from "react-icons/ai"
 import { connect } from "react-redux";
-import { deleteAll } from "../actions";
+import { deleteAll, saveTodos } from "../actions";
 
-const Todo = ({deleteAll}) => {
+const Todo = ({deleteAll, saveTodos}) => {
+  useEffect(() => {
+    saveTodos();
+  }, [saveTodos])
   return(
     <div>
       <div className="title-todo">
@@ -14,7 +17,7 @@ const Todo = ({deleteAll}) => {
       </div>
       <InputField />
       <TodosList />
-      <div>
+      <div className="deleteAll-div">
         <button
           onClick={() => deleteAll()}
           className="btn-submit"
@@ -27,7 +30,8 @@ const Todo = ({deleteAll}) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  deleteAll: () => dispatch(deleteAll())
+  deleteAll: () => dispatch(deleteAll()),
+  saveTodos: () => dispatch(saveTodos())
 })
 
 export default connect(null, mapDispatchToProps)(Todo)

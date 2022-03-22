@@ -101,3 +101,8 @@ body {
   cursor: pointer;
   margin: 0 0 0 20px;
 }
+
+.deleteAll-div {
+  display: flex;
+  justify-content: center;
+}
