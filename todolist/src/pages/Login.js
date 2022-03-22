@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import loginEmail from '../actions';
-
+import Footer from '../components/Footer'
 class Login extends React.Component {
   constructor() {
     super();
@@ -82,6 +82,7 @@ class Login extends React.Component {
             </button>
           </Link>
         </form>
+        <Footer />
       </div>);
   }
 }

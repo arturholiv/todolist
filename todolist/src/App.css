@@ -106,3 +106,16 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.footer {
+  background-color: #fff7c7;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
