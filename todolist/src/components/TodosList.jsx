@@ -4,7 +4,7 @@ import Todo from "./Todo"
 
 const TodosList = ({todos}) => {
   return (
-    <div>
+    <div className="todos-list">
       {todos.map((todo, i) => (
         <Todo todo={todo} id={i}/>
       ))}

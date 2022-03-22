@@ -21,11 +21,15 @@ class InputField extends React.Component {
   };
   render() { 
     return(
-      <form onSubmit={this.handleSubmit}>
+      <form
+      onSubmit={this.handleSubmit}
+      className="input-todo-form"
+      >
         <input
           type="text"
           name="todo"
           value={this.state.todo}
+          className="form__field"
           placeholder="Enter your Todo..."
           onChange={this.handleChange}
         />

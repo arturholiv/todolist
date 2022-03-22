@@ -5,9 +5,9 @@ import { removeTodo } from "../actions";
 
 const Todo = ({ todo, id, removeTodo }) => {
   return (
-    <div>
+    <div className="todo-item" >
       <div>{todo}</div>
-      <AiFillDelete onClick={() => removeTodo(id)}/>
+      <AiFillDelete onClick={() => removeTodo(id)} className="todo-remove"/>
     </div>
   );
 };

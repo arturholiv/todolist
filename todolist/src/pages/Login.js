@@ -30,7 +30,15 @@ class Login extends React.Component {
     const { dispatchUserEmail } = this.props;
     const minPasswordLength = 6;
     return (
-      <div>
+      <div className="login-form-page">
+        <div>
+          <h1>
+            To Do List
+          </h1>
+          <p>
+            Sign in to use the App
+          </p>
+        </div>
         <form className="form__group field">
           <label
             htmlFor="email-input"
@@ -55,7 +63,7 @@ class Login extends React.Component {
               type="password"
               name="password"
               minLength="6"
-              placeholder="Senha"
+              placeholder="Password"
               data-testid="password-input"
               required
               className="form__field"
@@ -65,11 +73,12 @@ class Login extends React.Component {
           <Link to="/list">
             <button
               type="submit"
+              className="btn-submit"
               disabled={ !(this.validateEmail(emailInputText)
               && password.length >= minPasswordLength) }
               onClick={ () => dispatchUserEmail(emailInputText) }
             >
-              Entrar
+              Enter
             </button>
           </Link>
         </form>

@@ -7,8 +7,8 @@ export default class Todo extends React.Component {
   render() { 
     return(
       <div>
-        <div>
-        <AiOutlineUnorderedList />
+        <div className="title-todo">
+        <AiOutlineUnorderedList className="list-img"/>
         <h1>To Do List</h1>
         </div>
         <InputField />

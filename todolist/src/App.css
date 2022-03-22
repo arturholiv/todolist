@@ -1,38 +1,103 @@
-.App {
+body {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(10,9,121,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.login-form-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__field {
+  background-color: rgb(221, 221, 221);
+  border-radius: 4px;
+  border-style: none;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 3%;
+  outline: none;
+  padding: 9px  8px;
+  position: relative;
   text-align: center;
+  text-transform: none;
+  user-select: none;
+  width: fit-content;
+  padding-left: 8px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn-submit {
+  background-color: #222;
+  border-radius: 4px;
+  border-style: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 3%;
+  outline: none;
+  padding: 9px 20px 8px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-img {
+  font-size: 3em;
+  padding-right: 1%;
+}
+
+.title-todo h1 {
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.title-todo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-todo-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.todos-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: fit-content;
+  max-width: 20%; */
+  height: fit-content;
+  justify-content: space-between;
+  border: solid 1px #000;
+  border-radius: 4px;
+  padding: 7px;
+  margin: 7px;
+  background-color: rgb(208, 227, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-remove {
+  cursor: pointer;
+  margin: 0 0 0 20px;
 }
