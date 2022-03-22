@@ -8,7 +8,6 @@ const Todo = ({ todo, id, removeTodo }) => {
     <div>
       <div>{todo}</div>
       <AiFillDelete onClick={() => removeTodo(id)}/>
-      {/* <div>x</div> */}
     </div>
   );
 };

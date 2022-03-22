@@ -34,6 +34,7 @@ class InputField extends React.Component {
   }
 }
 const mapDispatchToProps = dispatch => ({
-  addTodo: todo => dispatch(addTodo(todo))
+  addTodo: todo => dispatch(addTodo(todo)),
 });
+
 export default connect(null, mapDispatchToProps)(InputField);

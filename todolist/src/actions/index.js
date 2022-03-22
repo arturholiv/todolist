@@ -2,7 +2,7 @@ export const LOGIN_EMAIL = 'LOGIN_EMAIL';
 export const ADD_TODO = 'ADD_TODO';
 export const REMOVE_TODO = 'REMOVE_TODO';
 export const EDIT_TODO = 'EDIT_TODO';
-const ADD_TEXT = 'ADD_TEXT';
+export const ADD_TEXT = 'ADD_TEXT';
 
 export default function loginEmail(email) {
   return {
